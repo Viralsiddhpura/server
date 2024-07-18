@@ -1,0 +1,88 @@
+Module 12: Installation, Storage, and Compute with Windows Server 
+
+
+1. What two options are provided in the type of installation window during Windows Server 2016 installation?
+
+Windows Server 2016 comes in Standard and Datacenter editions and offers several types of installation for both editions: Desktop Experience (full GUI mode), Core (no GUI) and Nano Server. We will go through the installation and configuration of Windows Server 2016 with a Core type deployment, the initial setup and preparing it for the Hyper-V role.
+
+2. Write the step How to configure server step by step?
+
+
+Choose the hardware
+
+Install the operating system
+
+Configure the network
+
+Install the applications
+
+Configure the security
+
+Monitor and maintain
+
+test the server 
+
+3. What are the Pre installation tasks?
+
+Pre-Installation Tasks
+
+Before you install the managed packages, enable Translation Workbench, Retail Execution, and Apex Approval Lock.
+
+Enable Retail Execution for Enhanced Model
+To schedule and assign visits to your field reps, enable Retail Execution in Salesforce.
+
+Assign Sharing Settings
+
+To make records accessible to users, update the sharing settings.
+Enable Account Teams
+
+Multiple managers can access account teams and edit the account and respective data. 
+Account Teams help multiple users to better collaborate on accounts by defining a role for each team member, setting record-level access individually and viewing teams in list views and reports.
+
+Enable Translation Workbench
+
+Enable translation, add supported languages, and then allow translators to maintain translations directly through the workbench.
+
+Enable Adding or Removing Apex Approval Process Locks
+
+Enable record locking and unlocking in process automation settings to add or remove approval process locks by using Apex.
+
+Configure Apex Settings
+
+To download non-certified packages, configure the Apex settings.
+
+Create User Profiles
+
+Profiles define how users access objects and data and determine the actions that the 
+users can perform while using the app. Create and map specific user profiles to permission sets and field-level security settings during the app installation.
+
+Configure Picklist Values for Summer’22 Managed Package
+Add three picklist values to the business area and sales org picklist value sets only when you're upgrading your managed package to Summer’22.
+
+NEXT
+
+Install or Upgrade Managed Packages
+
+4. What are the Post installation tasks?
+
+Post Installation Tasks
+
+Post installation tasks are additional tasks that you might have to perform after installation. These tasks are required for certain scenarios and must be performed before you develop your applications or create and configure the runtime objects.
+
+Before you begin
+
+Complete the installation before running the post installation tasks.
+
+Set Environment Variable RV_HOME
+
+If you want to use the Rendezvous palette activities, install TIBCO Rendezvous®. For the supported versions, see the product readme file.
+
+On AIX Platform: Configure the Environment
+
+
+On AIX platform, follow the steps to configure the environment:
+
+Remove TIBCO_JRE_HOME/1.8.0/lib/xml.jar.
+Copy BW_HOME/system/shared/com.tibco.tpcl.javax.system.exports_5.10.0.001/xml-apis.jar into TIBCO_JRE_HOME/1.8.0/lib/ext
+Copy BW_HOME/system/shared/com.tibco.tpcl.com.ctc.wstx_3.2.300.002/wstx-asl-3.2.9.jar into TIBCO_JRE_HOME/1.8.0/lib/ext
+To resolve localhost on AIX platform, add the property [hosts = local, bind4] to /etc/netsvc.conf if applicable.
